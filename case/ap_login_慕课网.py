@@ -7,12 +7,14 @@ from selenium.webdriver.support import expected_conditions as es
 def get_driver():
     desired_caps = {}
     desired_caps["platformName"] = "Android"
-    desired_caps["automationName"] = "UiAutomation2" # 获取tost
-    desired_caps["platformVersion"] = "8.0"
+    desired_caps["automationName"] = "UiAutomation2"  # 获取toast
+    desired_caps["platformVersion"] = "7.1"
     desired_caps["deviceName"] = "WTKDU16716002118"
     desired_caps["appPackage"] = "cn.com.open.mooc"
-    desired_caps["appActivity"] = "com.imooc.component.imoocmain.splash.MCSplashActivity"
-    # desired_caps['noReset'] = True  # 启动时重新安装app
+    # desired_caps["appActivity"] = "com.imooc.component.imoocmain.splash.MCSplashActivity"
+    desired_caps["appActivity"] = "com.imooc.component.imoocmain.index.MCMainActivity"
+
+    # desired_caps['noReset'] = True  # 启动时不重新安装app
     desired_caps['unicodeKeyboard'] = True
     desired_caps['resetKeyboard'] = True
     # desired_caps["autoGrantPermissions"] = True  # 自动获取权限
@@ -29,7 +31,7 @@ def get_permission():
     agree_button = WebDriverWait(driver, 10).until(lambda x: x.
     find_element_by_id("cn.com.open.mooc:id/negativeBtn"))
     agree_button.click()
-get_permission()
+# get_permission()
 
 # 切换账号密码登录界面
 def login_switch():
@@ -80,13 +82,13 @@ def login_click():
     login_button.click()
 login_click()
 
-# # 获取tost元素
-def get_tost():
+# # 获取toast元素
+def get_toast():
     message = '登录密码错误'
     element_message = '//*[@text=\'{message}\']'.format(message=message)
     print('message：', element_message)
-    tost_element = WebDriverWait(driver, 5).until(lambda x: x.find_element_by_xpath(element_message))
-    print('tost：', tost_element.text)
+    toast_element = WebDriverWait(driver, 5).until(lambda x: x.find_element_by_xpath(element_message))
+    print('toast：', toast_element.text)
 # get_toast()
 
 
