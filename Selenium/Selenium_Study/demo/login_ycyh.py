@@ -11,8 +11,9 @@ class LoginYCYH(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 进入ycyh首页
-        path_browser_driver = r'D:\Chrome\Application\chromedriver.exe'
-        cls.driver = webdriver.Chrome(executable_path=path_browser_driver)
+        # path_browser_driver = r'D:\Chrome\Application\chromedriver.exe'
+        # cls.driver = webdriver.Chrome(executable_path=path_browser_driver)
+        cls.driver = webdriver.Chrome()
         url = 'http://www.ycyh56.com/'
         cls.driver.get(url)
         time.sleep(5)
