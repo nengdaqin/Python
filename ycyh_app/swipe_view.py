@@ -50,18 +50,16 @@ class SwipeViewYouCheYouHuo(unittest.TestCase):
     def case_suite():
         suite = unittest.TestSuite()
         suite.addTest(SwipeViewYouCheYouHuo("test_01"))
-        file_path = r'E\:report\result.html'
-        if not os.path.exists(file_path):
-            os.mkdir(file_path)
+        file_path = r"E:\Python\Report\Appium\result.html"
+
+        # if not os.path.exists(file_path):
+        #     os.mkdir(file_path)
         with open(file_path, 'wb') as f:
-            HTMLTestRunner.HTMLTestRunner(stream=f, title='测试报告', description='描述:').run(suite)
+            HTMLTestRunner.HTMLTestRunner(stream=f, verbosity=2,
+                                          title='xxx自动化测试报告',
+                                          description='测试人员:覃能达').run(suite)
 
 
 if __name__ == '__main__':
     run = SwipeViewYouCheYouHuo()
     run.case_suite()
-    with open(Report, 'wb') as f:
-        runner = HTMLTestRunner.HTMLTestRunner(stream=f,
-                                               verbosity=2,
-                                               title='XXXX自动化测试报告',
-                                               description='执行人：覃能达')
