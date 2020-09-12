@@ -5,6 +5,8 @@ import unittest
 import HTMLTestRunner
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class LoginMeiTuan(unittest.TestCase):
@@ -34,17 +36,21 @@ class LoginMeiTuan(unittest.TestCase):
     def test_01(self):
         # WebDriverWait(self.browser_driver, 5, 0.5).until(lambda x: x.find_element_by_css_selector(
         #     '.s_ipt')).send_keys("python")
-        WebDriverWait(self.browser_driver, 5, 0.5).until(lambda x: x.find_element_by_css_selector(
-            '#kw')).send_keys("python")
+        # element = WebDriverWait(self.browser_driver, 5, 0.5).until(EC.visibility_of_element_located(By.ID, 'kw'))
+        element = WebDriverWait(self.browser_driver, 5, 0.5).until(
+           EC.presence_of_element_located((By.ID, 'kw'))
+        )
+        # element.send_keys('hello')
 
+        element.send_keys("python")
 
-        time.sleep(10)
+        time.sleep(5)
 
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
     suite.addTest(LoginMeiTuan("test_01"))
-    file_path = r"E:\Python\Report\Selenium\result.html"
+    file_path = r"E:\GitHub\Report\Selenium\result.html"
     with open(file_path, "wb") as f:
         HTMLTestRunner.HTMLTestRunner(stream=f,
                                       verbosity=2,

@@ -13,7 +13,7 @@ elif 表达式4:
 else:
     语句
 """
-
+import random
 
 # 定义一个变量 记录分数
 # score = -100
@@ -57,9 +57,9 @@ else:
 
 """
 #猜拳游戏
-# 导入随机工具包
+# 导入随机工具包-random
 """
-import random
+
 
 # 定义一个玩家的变量
 # player = int(input("请出拳：石头（0），剪刀（1），布（2）："))

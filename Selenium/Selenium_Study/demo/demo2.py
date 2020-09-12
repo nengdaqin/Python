@@ -11,8 +11,8 @@ class LoginYCYH(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # 进入ycyh首页
-        path_browser_driver = r'D:\Chrome\Application\chromedriver.exe'
-        cls.driver = webdriver.Chrome(executable_path=path_browser_driver)
+        # path_browser_driver = r'D:\Chrome\Application\chromedriver.exe'
+        cls.driver = webdriver.Chrome()
         url = 'http://www.ycyh56.com/'
         cls.driver.get(url)
         time.sleep(5)
@@ -45,7 +45,7 @@ class LoginYCYH(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestSuite()
     suite.addTest(LoginYCYH("test_01"))
-    file_path = r"E:\Python\Report\Selenium\result.html"
+    file_path = r"E:\github\report\selenium\result.html"
     with open(file_path, "wb") as f:
         HTMLTestRunner.HTMLTestRunner(stream=f,
                                       verbosity=2,

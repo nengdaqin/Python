@@ -46,7 +46,7 @@ class LoginYCYH(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestSuite()
     suite.addTest(LoginYCYH("test_01"))
-    file_path = r"E:\Python\Report\Selenium\result.html"
+    file_path = r"E:\GitHub\Report\Selenium\result.html"
     with open(file_path, "wb") as f:
         HTMLTestRunner.HTMLTestRunner(stream=f,
                                       verbosity=2,

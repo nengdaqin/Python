@@ -38,7 +38,7 @@ class Person:
 xiaoming = Person("小明", 75.0)
 
 xiaoming.run()
-# xiaoming.eat()
+xiaoming.eat()
 print(xiaoming)
 
 xiaomei = Person("小美", 45.0)

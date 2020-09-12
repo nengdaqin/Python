@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [test="123456"] {
+				color:blueviolet;
+			}
+			[id="test2"] {
+				color:#DC143C;
+			}
+			[value="test3"] {
+				color:#0000FF;
+			}
+			[id="test4"][test="123456"]{
+				color: brown;
+			}
+    </style>
+</head>
+<body>
+        <h4 id="test1" value="test1" test="123456">第一句话</h4>
+		<h4 id="test2" value="test2">第二句话</h4>
+		<h4 id="test3" value="test3" >第三句话</h4>
+		<h4 id="test4" value="test4" test="123456">第四句话</h4>
+</body>
+</html>
