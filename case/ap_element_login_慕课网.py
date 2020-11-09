@@ -20,6 +20,7 @@ def get_driver():
     driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
     return driver
 
+
 driver = get_driver()
 # def login_
 # 切换到登录界面

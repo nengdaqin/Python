@@ -4,6 +4,7 @@ from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as es
 
+
 def get_driver():
     desired_caps = {}
     desired_caps["platformName"] = "Android"
@@ -23,23 +24,29 @@ def get_driver():
     driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
     return driver
 
+
 # 定义全局变量driver
 driver = get_driver()
+
 
 # 获取权限
 def get_permission():
     agree_button = WebDriverWait(driver, 10).until(lambda x: x.
-    find_element_by_id("cn.com.open.mooc:id/negativeBtn"))
+                                                   find_element_by_id("cn.com.open.mooc:id/negativeBtn"))
     agree_button.click()
+
+
 # get_permission()
 
 # 切换账号密码登录界面
 def login_switch():
-
     user_button = WebDriverWait(driver, 10).until(lambda x: x.
-    find_element_by_xpath("//*[@text = '账号密码登录']"))
+                                                  find_element_by_xpath("//*[@text = '账号密码登录']"))
     user_button.click()
+
+
 login_switch()
+
 
 # 输入账号密码---层级定位
 def login_by_node():

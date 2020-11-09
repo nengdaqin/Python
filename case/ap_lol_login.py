@@ -30,26 +30,25 @@ driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 # driver.find_element_by_id("")
 
 agree_button = WebDriverWait(driver, 6, 1).until(lambda x: x.
-find_element_by_id("com.tencent.qt.qtl:id/img_privacy_selector"))
+                                                 find_element_by_id("com.tencent.qt.qtl:id/img_privacy_selector"))
 agree_button.click()
 
 # sleep(3)
 # 点击"QQ登录"
 QQ_login_button = WebDriverWait(driver, 3, 1).until(lambda x: x.
-find_element_by_xpath("//*[@text='QQ登录']"))
+                                                    find_element_by_xpath("//*[@text='QQ登录']"))
 QQ_login_button.click()
 
 # 输入QQ账号密码
 Input_box = WebDriverWait(driver, 3, 1).until(lambda x: x.
-find_element_by_id("u")).send_keys("782284295")
+                                              find_element_by_id("u")).send_keys("782284295")
 WebDriverWait(driver, 3, 1).until(lambda x: x.
-find_element_by_id("p")).send_keys("QND782284295")
+                                  find_element_by_id("p")).send_keys("QND782284295")
 
 # 登录
 login_button = WebDriverWait(driver, 3, 1).until(lambda x: x.
-find_element_by_id("go"))
+                                                 find_element_by_id("go"))
 login_button.click()
-
 
 sleep(30)
 driver.quit()

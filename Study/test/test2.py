@@ -10,8 +10,9 @@ from Tools.scripts.win_add2path import PATH
 from appium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
-
 driver = None
+
+
 class SwipeViewYouCheYouHuo(unittest.TestCase):
 
     @classmethod
@@ -64,6 +65,7 @@ class SwipeViewYouCheYouHuo(unittest.TestCase):
                                                    title='XXXX自动化测试报告',
                                                    description='执行人：覃能达')
         runner.run(suite)
+
 
 if __name__ == '__main__':
     run = SwipeViewYouCheYouHuo()

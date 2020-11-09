@@ -10,8 +10,9 @@ from Tools.scripts.win_add2path import PATH
 from appium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
-
 driver = None
+
+
 class SwipeViewYouCheYouHuo(unittest.TestCase):
 
     @classmethod

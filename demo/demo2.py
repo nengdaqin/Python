@@ -10,8 +10,6 @@ from Tools.scripts.win_add2path import PATH
 from appium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
-
-
 desired_caps = {}
 desired_caps["platformName"] = "Android"
 # desired_caps["automationName"] = "UiAutomation2"  # 获取toast
@@ -32,5 +30,3 @@ driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 time.sleep(5)
 WebDriverWait(driver, 10, 0.5).until(lambda x: x.find_element_by_id
 ("com.huawei.systemmanager:id/optimize_button")).click()
-
-

@@ -3,6 +3,7 @@ from time import sleep
 import unittest
 from selenium.webdriver.support.wait import WebDriverWait
 
+
 class YcYh(unittest.TestSuite):
     @classmethod
     def setUpClass(cls):
@@ -24,8 +25,7 @@ class YcYh(unittest.TestSuite):
         return driver
 
     driver = setUpClass()
-    def setUp(self):
 
+    def setUp(self):
         sleep(20)
         # driver.quit()
-
