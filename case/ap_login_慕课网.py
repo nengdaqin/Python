@@ -9,9 +9,9 @@ def get_driver():
     desired_caps = {}
     desired_caps["platformName"] = "Android"
     desired_caps["automationName"] = "UiAutomation2"  # 获取toast
-    desired_caps["platformVersion"] = "7.1"
+    desired_caps["platformVersion"] = "10"
     desired_caps["deviceName"] = "WTKDU16716002118"
-    desired_caps["appPackage"] = "cn.com.open.mooc"
+    desired_caps["appPackage"] = "com.trnovels.vip.apps"
     # desired_caps["appActivity"] = "com.imooc.component.imoocmain.splash.MCSplashActivity"
     desired_caps["appActivity"] = "com.imooc.component.imoocmain.index.MCMainActivity"
 

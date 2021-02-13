@@ -17,7 +17,6 @@
 #     fw.close()
 
 
-
 import unittest
 import HTMLTestRunner
 import time
@@ -47,10 +46,10 @@ class TestClass(unittest.TestCase):
     def tearDown(self):
         print("this is tear_down")
 
-
     @classmethod
     def tearDownClass(cls):
         print("this is tear down class ")
+
 
 if __name__ == "__main__":
     # # unittest.main()
@@ -72,7 +71,7 @@ if __name__ == "__main__":
     now = time.strftime("%Y-%m-%d %H_%M_%S", time.localtime())
     # 定义测试报告存放路径和报告名称
     # now = time.strftime("%Y-%m-%d %H_%M_%S", time.localtime())
-    filename = "./" + now+"_test.html"
+    filename = "./" + now + "_test.html"
     fw = open(filename, 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(stream=fw, title='Testing', description=u'用例执行情况')
     runner.run(suite)
